@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Web Audio Api Equalizer</h2>
+    <div class="eq">
+        <div class="controls">
+            <label>Low Gain</label>
+            <input type="range" value="100" step="1" min="0" max="100"
+                oninput="changeGain(this.value, 'lowGain');"></input>
+        </div>
+        <div class="controls">
+            <label>Mid Gain</label>
+            <input type="range" value="50" step="1" min="0" max="100"
+                oninput="changeGain(this.value, 'midGain');"></input>
+        </div>
+        <div class="controls">
+            <label>High Gain</label>
+            <input type="range" value="100" step="1" min="0" max="100"
+                oninput="changeGain(this.value, 'highGain');"></input>
+        </div>
+    </div>
+    <h3>Robin Schulz <a href="">Sweet Goodbye</a></h3>
+    <audio id="player" controls crossorigin>
+        <source src="./01 Sweet Goodbye.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
